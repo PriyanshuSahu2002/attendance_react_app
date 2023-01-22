@@ -4,8 +4,8 @@ import Sheet from '../Components/Sheet'
 
 
 const Container = styled.div`
-display: grid;
-gap: 1rem;
+display: flex;
+flex-direction: column;
 `
 
 const Attendence = () => {

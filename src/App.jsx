@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 
 function App() {
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(231,233,235)",height:"100vh"}}>
       <Home />
     </div>
   );

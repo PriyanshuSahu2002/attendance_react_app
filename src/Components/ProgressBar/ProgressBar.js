@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import React, { useEffect, useState } from "react";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 export default function Pbar(props) {
   const [percentage, setPercentage] = useState(0);
@@ -14,8 +14,8 @@ export default function Pbar(props) {
   }, [percentage]);
 
   return (
-      <div style={{ width: 100, marginLeft: 70 }}>
-        <CircularProgressbar value={percentage} text={`${percentage}%`} />
+    <div style={{ width: 100, marginLeft: 70 }}>
+      <CircularProgressbar value={percentage} text={`${percentage}%`} />
     </div>
   );
 }

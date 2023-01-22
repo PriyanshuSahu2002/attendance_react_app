@@ -5,16 +5,17 @@ import SideBarItems from './SideBarItems'
 
 const Container = styled.div`
     float: left;
-    border: 1px solid;
+
     width: 250px;
     height: ${props=>props.sizeY}px;
     background-color: white;
     position: relative;
     overflow-x: hidden;
     z-index: 1;
-    top: 0;
+    top: -5px;
     padding-top: 20px  ;
-    left: 0;
+    left: -15px ;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 `
 const Sidebar = () => {
   return (

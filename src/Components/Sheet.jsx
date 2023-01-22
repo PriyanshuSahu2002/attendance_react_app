@@ -11,7 +11,13 @@ const Container = styled.div`
     padding: 10px;
     align-items: center;
     border-radius: 5px;
-    margin:10px 20px;
+    margin:5px 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+    &:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    transition: scale(1.01);
+    cursor: pointer;
+  }
 `
 
 const Pack = styled.div`

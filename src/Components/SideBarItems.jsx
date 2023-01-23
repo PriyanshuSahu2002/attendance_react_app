@@ -5,6 +5,7 @@ import {BiLibrary} from 'react-icons/bi'
 import {FcDocument} from 'react-icons/fc'
 
 const Container = styled.div`
+
 `
 const Box1 = styled.div`
 display:flex;
@@ -12,6 +13,7 @@ justify-content: left;
 margin-left: 10px;
 box-shadow: 0px 3px 3px rgba(0, 0, 0, 2%);
 height: 35px;
+
 `
 const Icon = styled.i`
 `
@@ -39,13 +41,6 @@ const SideBarItems = () => {
         <Icon><DiDatabase style={{color: 'mediumslateblue', fontSize: '23px'}} /></Icon>
         <Label> DashBoard</Label>
       </Box1>
-      <H5>Test</H5>
-      <Box2>
-        <Icon><BiLibrary style={{color: 'mediumslateblue', fontSize: '23px'}} /></Icon>
-        <Label> Items</Label>
-        <Icon><FcDocument style={{fontSize: '23px'}} /></Icon>
-        <Label> Exams</Label>
-        </Box2>
     </Container>
   )
 }

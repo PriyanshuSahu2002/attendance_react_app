@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from '../Image/img.jpg'
-
+import user from '../Image/user.png'
 
 const Container = styled.div`
     background-color: white;
@@ -67,7 +67,7 @@ const Sheet = () => {
     return (
         <Container>
             <Pack>
-            <CoverImg src={Img} alt="Article Cover" />
+            <CoverImg src={user} alt="Article Cover" />
             <Name>Priyanshu Sahu</Name></Pack>
             <Attendance><AttendanceText>Present</AttendanceText></Attendance>
             <Stream>CSE</Stream>
@@ -78,3 +78,4 @@ const Sheet = () => {
 }
 
 export default Sheet
+

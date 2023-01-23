@@ -21,6 +21,8 @@ const Sidebar = () => {
   return (
     <Container sizeY = {window.innerHeight}>
         <SideBarItems/>
+        <SideBarItems/>
+        <SideBarItems/>
     </Container>
   )
 }

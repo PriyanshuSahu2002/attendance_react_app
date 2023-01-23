@@ -1,6 +1,6 @@
 import React from 'react'
 // import Card from '../Components/Card'
-// import Navbar from '../Components/Navbar'
+ import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
 import Sidebar from '../Components/Sidebar';
 // import Cards from '../Components/Cards'
@@ -19,6 +19,7 @@ const Home = () => {
         <Container>
             {/* <Navbar />
             <Cards />    */}
+            <Navbar/>
             <Sidebar/>
             <Attendence/>
         </Container>

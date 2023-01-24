@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from '../Image/img.jpg'
 import user from '../Image/user.png'
 
 const Container = styled.div`

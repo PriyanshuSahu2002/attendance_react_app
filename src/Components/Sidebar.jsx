@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import SideBarItems from './SideBarItems'
-import {DiDatabase} from 'react-icons/di'
-import {FcDocument} from 'react-icons/fc'
+import {AiTwotoneDashboard} from 'react-icons/ai'
+import {FaFileAlt} from 'react-icons/fa'
 import {BiLibrary} from 'react-icons/bi'
 import {MdLibraryBooks} from 'react-icons/md'
 import {MdSubscriptions} from 'react-icons/md'
@@ -26,21 +26,21 @@ const Container = styled.div`
 `
 const Sidebar = () =>{
  let styling = {color: '#b7a1a1', marginLeft: '10px'};
-
+ let fontSize = {fontSize: '20px'};
   return (
     <Container sizeY = {window.innerHeight}>
-        <SideBarItems name = "Dashboard" icon = {<DiDatabase style={{fontSize: '23px'}} />} />
+        <SideBarItems name = "Dashboard" icon = {<AiTwotoneDashboard style={fontSize}/>} />
         <h5 style = {styling} >Test</h5>
-        <SideBarItems name = "Items" icon = {<BiLibrary style={{fontSize: '23px'}} />} />
-        <SideBarItems name = "Exams" icon = {<FcDocument style={{fontSize: '23px'}} />} />
+        <SideBarItems name = "Items" icon = {<BiLibrary style={fontSize} />} />
+        <SideBarItems name = "Exams" icon = {<FaFileAlt style={fontSize} />} />
         <h5 style = {styling}>Organize</h5>
-        <SideBarItems name = "Courses" icon = {<MdLibraryBooks style={{fontSize: '20px'}} />} />
-        <SideBarItems name = "Courses Subscription" icon = {<MdSubscriptions style={{fontSize: '20px'}} />} />
-        <SideBarItems name = "Students" icon = {<FaUserGraduate style={{fontSize: '20px'}} />} />
-        <SideBarItems name = "Private Groups" icon = {<HiUserGroup style={{fontSize: '20px'}} />} />
+        <SideBarItems name = "Courses" icon = {<MdLibraryBooks style={fontSize} />} />
+        <SideBarItems name = "Courses Subscription" icon = {<MdSubscriptions style={fontSize} />} />
+        <SideBarItems name = "Students" icon = {<FaUserGraduate style={fontSize} />} />
+        <SideBarItems name = "Private Groups" icon = {<HiUserGroup style={fontSize} />} />
         <h5 style = {styling}>Manage</h5>
-        <SideBarItems name = "User" icon = {<BsFillPersonFill style={{fontSize: '23px'}} />} />
-        <SideBarItems name = "Configuration" icon = {<RiUserSettingsLine style={{fontSize: '23px'}} />} />
+        <SideBarItems name = "User" icon = {<BsFillPersonFill style={fontSize} />} />
+        <SideBarItems name = "Configuration" icon = {<RiUserSettingsLine style={fontSize} />} />
     </Container>
   )
 }

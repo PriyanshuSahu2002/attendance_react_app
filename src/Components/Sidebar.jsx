@@ -30,7 +30,7 @@ const Label = styled.h5`
   margin: 20px 10px;
 `
 const Sidebar = () =>{
- let styling = {color: '#b7a1a1', marginLeft: '10px'};
+ 
  let fontSize = {fontSize: '20px' ,color:'#777777'};
   return (
     <Container sizeY = {window.innerHeight}>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import { db } from "./firebase-config";
+import { db } from "../Image/Utility/firebase-config.js";
 import { onValue, ref } from "firebase/database";
 
 const Wraper = styled.div`
@@ -44,7 +44,7 @@ function Cards() {
               year={a.collegeYear}
               teacher={a.teacherName}
               date={data[0].date}
-              percentage={85}
+              percentage={95}
             ></Card>
           );
         })}

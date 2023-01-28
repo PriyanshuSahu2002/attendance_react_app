@@ -6,7 +6,7 @@ import Pbar from "./ProgressBar/ProgressBar";
 const Card1 = styled.div`
   margin: 20px;
   padding: 20px;
-  width: 350px;
+  width: 300px;
   min-height: 150px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -42,7 +42,7 @@ export default function Card(props) {
 
   return (
     <>
-      <Card1>
+      <Card1 >
         <Sname>{props.sub_name}</Sname>
         <Circle>
           {" "}

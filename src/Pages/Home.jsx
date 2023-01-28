@@ -3,7 +3,7 @@ import React from 'react'
  import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
 import Sidebar from '../Components/Sidebar';
-// import Cards from '../Components/Cards'
+import Cards from '../Components/Cards'
 import Attendence from './Attendence'
 
 
@@ -21,7 +21,7 @@ const Home = () => {
             <Cards />    */}
             <Navbar/>
             <Sidebar/>
-            <Attendence/>
+            <Cards/>
         </Container>
     )
 }

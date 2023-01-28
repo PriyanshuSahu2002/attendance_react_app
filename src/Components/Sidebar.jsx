@@ -35,17 +35,12 @@ const Sidebar = () =>{
   return (
     <Container sizeY = {window.innerHeight}>
         <SideBarItems name = "Dashboard" icon = {<MdDashboard style={fontSize}/>} />
-        <Label>Test</Label>
-        <SideBarItems name = "Items" icon = {<BiLibrary style={fontSize} />} />
-        <SideBarItems name = "Exams" icon = {<FaFileAlt style={fontSize} />} />
         <Label>Organize</Label>
-        <SideBarItems name = "Courses" icon = {<MdLibraryBooks style={fontSize} />} />
-        <SideBarItems name = "Courses Subscription" icon = {<MdSubscriptions style={fontSize} />} />
         <SideBarItems name = "Students" icon = {<FaUserGraduate style={fontSize} />} />
-        <SideBarItems name = "Private Groups" icon = {<HiUserGroup style={fontSize} />} />
+        <SideBarItems name = "Faculty" icon = {<HiUserGroup style={fontSize} />} />
         <Label>Manage</Label>
         <SideBarItems name = "User" icon = {<BsFillPersonFill style={fontSize} />} />
-        <SideBarItems name = "Configuration" icon = {<RiUserSettingsLine style={fontSize} />} />
+        <SideBarItems name = "LogOut" icon = {<RiUserSettingsLine style={fontSize} />} />
     </Container>
   )
 }

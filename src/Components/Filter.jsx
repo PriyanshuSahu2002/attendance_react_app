@@ -8,7 +8,7 @@ const Dropdown = styled.form`
 `;
 
 const DropContent = styled.select`
-  position: absolute;
+
   padding: 10px;
   background: #fff;
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);

@@ -3,12 +3,14 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   justify-content: left;
-  margin-left: 10px;
+ 
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 2%);
   transition-duration: 0.3s;
-  margin: 20px 20px;
+
   height: 30px;
   padding: 5px;
+  padding-left: 40px;
+  margin-top: 10px;
   align-items: center;
 
   &:hover {
@@ -21,7 +23,9 @@ const Icon = styled.i`
   margin-right: 10px;
   margin-top: 4px;
 `;
-const Label = styled.div``;
+const Label = styled.p`
+color: white;
+`;
 
 const SideBarItems = (props) => {
   return (

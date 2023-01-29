@@ -10,10 +10,12 @@ const Form = styled.form`
 width:100%;
 max-width:200px;
 display:flex;
+background-color: white;
+height: 20px;
 justify-content: center;
 align-items: center;
-border: 1px solid;
-border-radius:5px;
+border: 1px solid black;
+border-radius:2px ;
 padding:8px 8px;
 backdrop-filter:blur(4px) saturate(180%);
 `
@@ -34,7 +36,7 @@ background: transparent;
 flex:1;
 outline:none;
 font-size:14px;
-color:#0221ff;
+color:black;
 border:0px;
 ::placeholder,
   ::-webkit-input-placeholder {

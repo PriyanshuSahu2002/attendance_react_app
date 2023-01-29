@@ -1,7 +1,11 @@
+import { red } from "@mui/material/colors";
 import React, { useEffect, useState } from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
+const styles = {
+  stroke: red 
+};
 export default function Pbar(props) {
   const [percentage, setPercentage] = useState(0);
 

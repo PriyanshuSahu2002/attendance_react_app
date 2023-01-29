@@ -3,14 +3,19 @@ import styled from "styled-components";
 import Card from "./Card";
 import { db } from "./Utility/firebase-config";
 import { onValue, ref } from "firebase/database";
-
+import { Link } from "react-router-dom";
 const Wraper = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-left: 100px;
+  padding-left: 50px;
+  overflow-y: scroll;
 `;
 
+const styles = {
+  textDecoration: 'none',
+  color:'inherit'
+}
 function Cards() {
   let data = [
     {
@@ -21,6 +26,7 @@ function Cards() {
     },
   ];
 
+  
   const [classes, setClasses] = useState([]);
   useEffect(() => {
     const query = ref(db, "4 CSE");
@@ -39,6 +45,7 @@ function Cards() {
       <Wraper>
         {classes.map((a) => {
           return (
+            <Link to="attendance" style={styles}>
             <Card
               sub_name={a.subject}
               year={a.collegeYear}
@@ -46,6 +53,7 @@ function Cards() {
               date={data[0].date}
               percentage={95}
             ></Card>
+            </Link>
           );
         })}
       </Wraper>

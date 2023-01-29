@@ -3,22 +3,23 @@ import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
 import Sidebar from '../Components/Sidebar';
 import Cards from '../Components/Cards'
-import { Link } from "react-router-dom";
+
 
 
 const Container = styled.div`
 
-  margin: 5px;
-  margin-right: 20px;
-  padding: 5px;
+ padding-left: 10px;
+height: 100%;
+
+
 `;
 
 const Home = () => {
     return (
       <Container>
-        <Navbar />
         <Sidebar />
-        <Link to="attendance"><Cards /></Link>
+        <Navbar />
+        <Cards />
       </Container>
     );
 }

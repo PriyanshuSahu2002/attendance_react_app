@@ -1,29 +1,26 @@
 import React from 'react'
-// import Card from '../Components/Card'
- import Navbar from '../Components/Navbar'
+import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
 import Sidebar from '../Components/Sidebar';
 import Cards from '../Components/Cards'
-import Attendence from './Attendence'
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
 
-  margin: 10px;
+  margin: 5px;
   margin-right: 20px;
   padding: 5px;
 `;
 
 const Home = () => {
     return (
-        <Container>
-            {/* <Navbar />
-            <Cards />    */}
-            <Navbar/>
-            <Sidebar/>
-            <Cards/>
-        </Container>
-    )
+      <Container>
+        <Navbar />
+        <Sidebar />
+        <Link to="attendance"><Cards /></Link>
+      </Container>
+    );
 }
 
 export default Home

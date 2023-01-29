@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SideBarItems from './SideBarItems'
-import {AiTwotoneDashboard} from 'react-icons/ai'
-import {FaFileAlt} from 'react-icons/fa'
-import {BiLibrary} from 'react-icons/bi'
-import {MdDashboard, MdLibraryBooks} from 'react-icons/md'
-import {MdSubscriptions} from 'react-icons/md'
+import {MdDashboard} from 'react-icons/md'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {HiUserGroup} from 'react-icons/hi'
 import {FaUserGraduate} from 'react-icons/fa'
@@ -33,7 +29,7 @@ const Sidebar = () =>{
  
  let fontSize = {fontSize: '20px' ,color:'#777777'};
   return (
-    <Container sizeY = {window.innerHeight}>
+     <Container sizeY = {window.innerHeight}>
         <SideBarItems name = "Dashboard" icon = {<MdDashboard style={fontSize}/>} />
         <Label>Organize</Label>
         <SideBarItems name = "Students" icon = {<FaUserGraduate style={fontSize} />} />

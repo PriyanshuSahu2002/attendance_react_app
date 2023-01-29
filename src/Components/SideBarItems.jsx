@@ -1,8 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import styled from "styled-components";
-import user from "../Image/user.png";
-import im from "../Image/img.jpg";
 const Container = styled.div`
   display: flex;
   justify-content: left;

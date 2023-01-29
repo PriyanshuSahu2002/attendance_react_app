@@ -11,7 +11,7 @@ export default function Pbar(props) {
         setPercentage(percentage + 1);
       }
     }, 25);
-  }, [percentage]);
+  }, [percentage, props.percentage]);
 
   return (
     <div style={{ width: 100, marginLeft: 70 }}>

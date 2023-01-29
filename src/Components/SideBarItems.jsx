@@ -13,33 +13,23 @@ const Container = styled.div`
   height: 30px;
   padding: 5px;
   align-items: center;
+
   &:hover {
-    box-shadow: 0 6px 6px 0 #c6c2c218;
+    box-shadow: 0 6px 6px 0 #00000019;
     cursor: pointer;
+    background-color: #4e4e4e;
   }
 `;
-const Icon = styled.img`
-  width: 50px;
-
-  height: 50px;
-  background-repeat: no-repeat;
-  border-radius: 0;
+const Icon = styled.i`
+  margin-right: 10px;
+  margin-top: 4px;
 `;
 const Label = styled.div``;
 
-function changeicon(e, user) {
-  e.target.style.backgroundImage =
-    "https://miro.medium.com/max/2744/1*q2JJN3Y-82LKGvFFr2e8kw.png";
-}
-
 const SideBarItems = (props) => {
-  const [image, setImage] = useState(user);
   return (
-    <Container
-      onMouseEnter={() => setImage(props.Icon)}
-      onMouseLeave={() => setImage(user)}
-    >
-      <Icon src={image} />
+    <Container>
+      <Icon>{props.icon}</Icon>
       <Label> {props.name}</Label>
     </Container>
   );

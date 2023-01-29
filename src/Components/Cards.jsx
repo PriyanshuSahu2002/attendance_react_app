@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import { db } from "../Image/Utility/firebase-config.js";
+import { db } from "./Utility/firebase-config";
 import { onValue, ref } from "firebase/database";
 
 const Wraper = styled.div`

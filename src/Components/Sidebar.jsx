@@ -60,6 +60,7 @@ const Label = styled.h5`
 `;
 const Title = styled.h1`
   font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 30px;
  margin-top: 10px;
   color: white;
 
@@ -70,7 +71,7 @@ const Sidebar = () => {
     <Container>
       <Wrapper>
         <Top>
-          <Title>Attendance_App</Title>
+          <Title>Attendance App</Title>
 
         </Top>
 

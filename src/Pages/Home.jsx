@@ -15,10 +15,11 @@ height: 100%;
 `;
 
 const Home = () => {
+    
     return (
-      <Container>
+      <Container >
         <Sidebar />
-        <Navbar />
+        <Navbar name ={"Dashboard"} />
         <Cards />
       </Container>
     );

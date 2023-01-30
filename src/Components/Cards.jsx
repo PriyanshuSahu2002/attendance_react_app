@@ -8,7 +8,7 @@ const Wraper = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding-left: 50px;
+  padding-left: 3px;
   overflow-y: scroll;
 `;
 
@@ -45,7 +45,7 @@ function Cards() {
       <Wraper>
         {classes.map((a) => {
           return (
-            <Link to="attendance" style={styles}>
+            <Link to="attendance/4/cse/english"  style={styles}>
             <Card
               sub_name={a.subject}
               year={a.collegeYear}

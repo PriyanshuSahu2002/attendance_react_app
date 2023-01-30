@@ -24,6 +24,7 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  margin-right: 20px;
 `;
 
 const Right = styled.div`
@@ -38,9 +39,10 @@ const Title = styled.span`
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 1px;
+  
 `;
 
-function Navbar() {
+function Navbar(props) {
   const [selected, setSelected] = useState("");
 
   return (
@@ -50,14 +52,14 @@ function Navbar() {
           <SearchBar />
         </Left>
         <Center>
-          <Title>DASHBOARD</Title>
+          <Title>{props.name}</Title>
         </Center>
         <Right>
           <Filter selected={selected} setSelected={setSelected} />
           <Filter selected={selected} setSelected={setSelected} />
         </Right>
       </Wrapper>
-      {/* <hr style={{ color: "red", backgroundColor: "grey", height: "1px" }} /> */}
+      
     </Container>
   );
 }

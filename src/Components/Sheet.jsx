@@ -11,7 +11,8 @@ const Container = styled.div`
     align-items: center;
     border-radius: 5px;
     margin:5px 20px;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e4e3e3;
+    box-shadow: 0px 3px 6px #e4e3e3;
     &:hover {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     transition: scale(1.01);

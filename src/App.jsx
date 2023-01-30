@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/attendance" element={<Attendence />} />
+            <Route path="/attendance/:year/:stream/:subject" element={<Attendence />} />
           </Routes>
       </BrowserRouter>
     </div>

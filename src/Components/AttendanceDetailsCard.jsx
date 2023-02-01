@@ -3,9 +3,6 @@ import styled from "styled-components";
 import AttendanceDetailsCardItems from "./AttendanceDetailsCardItems";
 
 const Container = styled.div`
-
-
-  
   
   margin-top: 20px;
 

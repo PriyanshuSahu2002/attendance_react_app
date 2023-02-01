@@ -5,7 +5,6 @@ import AttendanceDetailsCard from "../Components/AttendanceDetailsCard";
 import Sheet from "../Components/Sheet";
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
-import Options from "../Components/Options";
 import MiddleNavBar from "../Components/MiddleNavBar";
 
 const Container = styled.div`
@@ -13,9 +12,13 @@ const Container = styled.div`
   height: 100%;
 `;
 const Wrapper = styled.div`
-  height: 350px;
+  height: ${props => props.screenY/1.7}px;
   overflow-y: scroll;
-
+  margin-bottom: 100px;
+`;
+const ScrollWa = styled.div`
+  overflow-y: scroll;
+  height: 100%;
 `;
 const Attendence = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -28,17 +31,25 @@ const Attendence = () => {
     <Container>
       <Sidebar />
       <Navbar name={"Student"} />
-      <AttendanceDetailsCard />
-      <MiddleNavBar />
-      <Wrapper ref={containerRef} onScroll={handleScroll}>
-        <Sheet />
-        <Sheet />
-        <Sheet />
-        <Sheet />
-        <Sheet />
-        <Sheet />
-        <Sheet />
-      </Wrapper>
+      <ScrollWa>
+        <AttendanceDetailsCard />
+        <MiddleNavBar />
+
+        <Wrapper ref={containerRef} screenY = {window.screen.height} onScroll={handleScroll}>
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+          <Sheet />
+        </Wrapper>
+      </ScrollWa>
     </Container>
   );
 };

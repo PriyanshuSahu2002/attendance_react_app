@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import user from '../Image/user.png'
-
+import { Link } from "react-router-dom";
 const Container = styled.div`
     background-color: white;
     display: flex;
@@ -62,9 +62,13 @@ font-weight: 700;
 margin-right: 20px;
 
 `
-
+const styles = {
+    textDecoration: 'none',
+    color:'inherit'
+  }
 const Sheet = () => {
     return (
+        <Link to="student"  style={styles}>
         <Container>
             <Pack>
             <CoverImg src={user} alt="Article Cover" />
@@ -74,6 +78,7 @@ const Sheet = () => {
             <Year>4</Year>
             <Detail>See Student Detail</Detail>
         </Container>
+        </Link>
     )
 }
 

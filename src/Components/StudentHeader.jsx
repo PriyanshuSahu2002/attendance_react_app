@@ -13,60 +13,70 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 3;
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
   flex-direction: column;
-  margin-left: 40px;
-
+  
 `;
 
 const Top = styled.div`
-font-size: 40px;
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: 1px;
-
-`
+`;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
+  display: flex;
+  justify-content: end;
 `;
 
 const Down = styled.div`
- flex: 1;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
+  padding: 8px;
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 600;
 `;
 
 const StudentData = styled.span`
-padding: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 `;
 
 const CoverImg = styled.img`
-  width: 100px;
+  width: 170px;
+  height: 170px;
   border-radius: 50px;
+  padding: 10px;
 `;
 
 export default function StudentHeader() {
   return (
     <Container>
       <Left>
-        <Top><StudentData>Priyanshu sahu </StudentData></Top>
+        <Top>
+          <StudentData>Priyanshu sahu </StudentData>
+        </Top>
         <Down>
-        <StudentData>RollNumber: 301202219032</StudentData>
-        <StudentData>Year: 4th</StudentData>
-        <StudentData>Course: CSE</StudentData>
-        <StudentData>EnrollNumber: BH3553</StudentData>
-        <StudentData>DOB: 20 sep 2001</StudentData>
-        <StudentData>Gender: Male</StudentData>
-        <StudentData>MobileNumber: 20292293843</StudentData>
-        <StudentData>Email: Priyanshusahu@gmail.com </StudentData>
+          <StudentData>Roll Number: 301202219020</StudentData>
+          <StudentData>Year: 4th</StudentData>
+          <StudentData>Course: CSE</StudentData>
+          <StudentData>Enrollnment Number: BH3542</StudentData>
+          <StudentData>DOB: 25 Sep 2002</StudentData>
+          <StudentData>Gender: Male</StudentData>
+          <StudentData>Mobile Number: +91-8839128532</StudentData>
+          <StudentData>Email: Priyanshusahu833@gmail.com </StudentData>
         </Down>
       </Left>
-      <Right></Right>
-      {/* <div><CoverImg src={user} alt="Article Cover" /></div> */}
+      <Right>
+        <CoverImg src={user} alt="Article Cover" />
+      </Right>
     </Container>
   );
 }

@@ -32,6 +32,7 @@ const SideBarItems = (props) => {
     <Container>
       <Icon>{props.icon}</Icon>
       <Label> {props.name}</Label>
+    
     </Container>
   );
 };

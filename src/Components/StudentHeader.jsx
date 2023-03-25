@@ -18,7 +18,6 @@ const Left = styled.div`
   flex-wrap: wrap;
   padding: 5px;
   flex-direction: column;
-  
 `;
 
 const Top = styled.div`
@@ -56,26 +55,28 @@ const CoverImg = styled.img`
   padding: 10px;
 `;
 
-export default function StudentHeader() {
+export default function StudentHeader(students) {
   return (
     <Container>
       <Left>
         <Top>
-          <StudentData>Priyanshu sahu </StudentData>
+          <StudentData>{students.details.name}</StudentData>
         </Top>
         <Down>
-          <StudentData>Roll Number: 301202219020</StudentData>
-          <StudentData>Year: 4th</StudentData>
-          <StudentData>Course: CSE</StudentData>
+          <StudentData>Roll Number: {students.details.rollNumber}</StudentData>
+          <StudentData>Year: {students.collegeYear}</StudentData>
+          <StudentData>Course: {students.details.stream}</StudentData>
           <StudentData>Enrollnment Number: BH3542</StudentData>
           <StudentData>DOB: 25 Sep 2002</StudentData>
           <StudentData>Gender: Male</StudentData>
-          <StudentData>Mobile Number: +91-8839128532</StudentData>
+          <StudentData>
+            Mobile Number: +91-{students.details.mobileNumber}
+          </StudentData>
           <StudentData>Email: Priyanshusahu833@gmail.com </StudentData>
         </Down>
       </Left>
       <Right>
-        <CoverImg src={user} alt="Article Cover" />
+        <CoverImg src={user} alt="Profile Image" />
       </Right>
     </Container>
   );

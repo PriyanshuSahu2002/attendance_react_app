@@ -1,6 +1,8 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-
+import { useEffect } from "react";
+import { doc, getDoc, collection, getDocs, CollectionReference } from "firebase/firestore";
+import { db, firebase } from "./Utility/firebase-config";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,51 +28,55 @@ const Option = styled.span`
   }
 `;
 
-const StudentMiddleComponent = () => {
-  const [selected, setSelectedOption] = useState("option1");
+const StudentMiddleComponent = (props) => {
+
+  const [selected, setSelectedOption] = useState(props.subjects[0]);
+  const [attendanceData, setAttendanceData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const attendanceRef = doc(firebase, "Students", "301202219020");
+
+      const co = collection(attendanceRef, "Attendance")
+      const s = doc(co, selected == null ? props.subjects[0] : selected)
+      const snapshot = await getDoc(s);
+
+      if (!snapshot.empty) {
+        
+        setAttendanceData(snapshot.data())
+        console.log(attendanceData);
+      } else {
+        console.log("No data found for collection!");
+      }
+    };
+
+    fetchData();
+  }, [selected]);
+
 
   const handleChange = (event) => {
     setSelectedOption(event);
+    console.log(attendanceData)
+
   };
   return (
     <Container>
-      <Option
-        selected={selected === "option1"}
-        onClick={() => handleChange("option1")}
-      >
-        Quantum Mechanics
-      </Option>
-      <Option
-        selected={selected === "option2"}
-        onClick={() => handleChange("option2")}
-      >
-        Game Theory
-      </Option>
-      <Option
-        selected={selected === "option3"}
-        onClick={() => handleChange("option3")}
-      >
-        R Programming
-      </Option>
-      <Option
-        selected={selected === "option4"}
-        onClick={() => handleChange("option4")}
-      >
-        Cyber Security
-      </Option>
-      <Option
-        selected={selected === "option5"}
-        onClick={() => handleChange("option5")}
-      >
-        Mathmatics
-      </Option>
+      {
+        props.subjects.map((subject) => {
+          return (
+            <Option
+              selected={selected === subject}
+              onClick={() => handleChange(subject)}
+            >
+              {subject}
+            </Option>
+          )
+        })
+      }
+
     </Container>
   );
 };
 
 export default StudentMiddleComponent;
 
-// color: 'black',
-// borderBottom: '2px solid #5A98FC',
-// fontWeight:' 600',
-// fontSize: '20px',

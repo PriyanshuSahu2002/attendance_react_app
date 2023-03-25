@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useState } from 'react';
+import React from "react";
+import styled from "styled-components";
+import { useState } from "react";
 
 const Dropdown = styled.form`
   width: 200px;
@@ -8,7 +8,6 @@ const Dropdown = styled.form`
 `;
 
 const DropContent = styled.select`
-
   padding: 10px;
   background: #fff;
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
@@ -18,7 +17,7 @@ const DropContent = styled.select`
 `;
 
 export default function Filter({ selected, setSelected }) {
-  const [value, setValue] = useState('default');
+  const [value, setValue] = useState("default");
 
   const handleChange = (e) => {
     setValue(e.target.value);

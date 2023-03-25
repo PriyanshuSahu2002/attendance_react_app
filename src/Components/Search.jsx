@@ -47,11 +47,11 @@ border:0px;
 function SearchBar() {
   return (
     <>
-    <Search>
-    <Form><Input type="text" placeholder = "Search"/>
-    <Button type= "submit"><BiSearchAlt style={{color: 'black', fontSize: '20px'}}/></Button>
-    </Form>
-    </Search>
+      <Search>
+        <Form><Input type="text" placeholder="Search" />
+          <Button type="submit"><BiSearchAlt style={{ color: 'black', fontSize: '20px' }} /></Button>
+        </Form>
+      </Search>
     </>
   )
 }

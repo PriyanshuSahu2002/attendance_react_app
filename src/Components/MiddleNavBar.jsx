@@ -22,7 +22,7 @@ const Last = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px; 
     align-items: center;
     margin-right: 70px;
     padding-left: 20px;
@@ -45,7 +45,7 @@ const MiddleNavBar = () => {
       </Middle>
       <Last>
         <Labels>Student Name</Labels>
-        <Labels>Presen/Absent</Labels>
+        <Labels>Present/Absent</Labels>
         <Labels>Branch</Labels>
         <Labels>Year</Labels>
         <Labels>Details</Labels>

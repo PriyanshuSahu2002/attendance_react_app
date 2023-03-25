@@ -64,20 +64,20 @@ margin-right: 20px;
 `
 const styles = {
     textDecoration: 'none',
-    color:'inherit'
-  }
+    color: 'inherit'
+}
 const Sheet = () => {
     return (
-        <Link to="student"  style={styles}>
-        <Container>
-            <Pack>
-            <CoverImg src={user} alt="Article Cover" />
-            <Name>Priyanshu Sahu</Name></Pack>
-            <Attendance><AttendanceText>Present</AttendanceText></Attendance>
-            <Stream>CSE</Stream>
-            <Year>4</Year>
-            <Detail>See Student Detail</Detail>
-        </Container>
+        <Link to="student" style={styles}>
+            <Container>
+                <Pack>
+                    <CoverImg src={user} alt="Article Cover" />
+                    <Name>Priyanshu Sahu</Name></Pack>
+                <Attendance><AttendanceText>Present</AttendanceText></Attendance>
+                <Stream>CSE</Stream>
+                <Year>4</Year>
+                <Detail>See Student Detail</Detail>
+            </Container>
         </Link>
     )
 }

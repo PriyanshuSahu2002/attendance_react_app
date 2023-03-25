@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import React, { useState, useEffect } from "react";
 import { db } from "./Utility/firebase-config";
 import { onValue, ref } from "firebase/database";
 import { Link } from "react-router-dom";
@@ -13,9 +13,9 @@ const Wraper = styled.div`
 `;
 
 const styles = {
-  textDecoration: 'none',
-  color:'inherit'
-}
+  textDecoration: "none",
+  color: "inherit",
+};
 function Cards() {
   let data = [
     {
@@ -26,7 +26,6 @@ function Cards() {
     },
   ];
 
-  
   const [classes, setClasses] = useState([]);
   useEffect(() => {
     const query = ref(db, "4 CSE");
@@ -40,19 +39,16 @@ function Cards() {
       }
     });
   }, []);
-  return (
-    <>
-      <Wraper>
-        {classes.map((a) => {
+  return (sudo apt install gh
           return (
-            <Link to="attendance/4/cse/english"  style={styles}>
-            <Card
-              sub_name={a.subject}
-              year={a.collegeYear}
-              teacher={a.teacherName}
-              date={data[0].date}
-              percentage={95}
-            ></Card>
+            <Link to="attendance/4/cse/english" style={styles}>
+              <Card
+                sub_name={a.subject}
+                year={a.collegeYear}
+                teacher={a.teacherName}
+                date={data[0].date}
+                percentage={95}
+              ></Card>
             </Link>
           );
         })}

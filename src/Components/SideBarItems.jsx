@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   justify-content: left;
- 
+
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 2%);
   transition-duration: 0.3s;
 
@@ -24,7 +24,7 @@ const Icon = styled.i`
   margin-top: 4px;
 `;
 const Label = styled.p`
-color: white;
+  color: white;
 `;
 
 const SideBarItems = (props) => {
@@ -32,7 +32,6 @@ const SideBarItems = (props) => {
     <Container>
       <Icon>{props.icon}</Icon>
       <Label> {props.name}</Label>
-    
     </Container>
   );
 };
